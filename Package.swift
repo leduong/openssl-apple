@@ -15,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "openssl",
-            url: "https://github.com/passepartoutvpn/openssl-apple/releases/download/3.2.107/openssl.xcframework.zip",
-            checksum: "6aa5b917eb03487978b5d6ab1c019127af4f67568bd1f793c5b58cf786a49399"),
+            url: "https://github.com/leduong/openssl-apple/releases/download/3.3.0/openssl.xcframework.zip",
+            checksum: "3874f4fb4a6ab570070165d16052b345fe2efd62499f9393317ac9aa457c2f1e"),
 
         // local development
 //        .binaryTarget(

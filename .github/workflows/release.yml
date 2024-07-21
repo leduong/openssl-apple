@@ -43,15 +43,15 @@ jobs:
           ( cd $FRAMEWORK_DIR && zip -yr $FRAMEWORK.zip $FRAMEWORK )
 
           echo "artifact=$FRAMEWORK_DIR/$FRAMEWORK.zip" >> $GITHUB_OUTPUT
-      - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v4
-        with:
-          gpg_private_key: ${{ secrets.GPG_KEY }}
-          passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
-          git_tag_gpgsign: true
-          git_push_gpgsign: false
+      # - name: Import GPG key
+      #   uses: crazy-max/ghaction-import-gpg@v4
+      #   with:
+      #     gpg_private_key: ${{ secrets.GPG_KEY }}
+      #     passphrase: ${{ secrets.GPG_PASSPHRASE }}
+      #     git_user_signingkey: true
+      #     git_commit_gpgsign: true
+      #     git_tag_gpgsign: true
+      #     git_push_gpgsign: false
       - name: Update Package.swift
         id: package
         env:
